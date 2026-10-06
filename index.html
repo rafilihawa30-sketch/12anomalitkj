@@ -1,141 +1,297 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>12 Anomali TKJ</title>
+```
+<title>12 Anomali TKJ</title>
 
-    <!-- Hubungkan CSS -->
-    <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
-    <header class="hero">
-        <div class="hero-content">
-            <p class="label">DOKUMENTASI TKJ</p>
+```
+<!-- Background -->
+<div class="bg-grid"></div>
 
-            <h1>12 ANOMALI TKJ</h1>
-
-            <p class="subtitle">
-                Dokumentasi Anomali dan Permasalahan Jaringan Komputer
-            </p>
-
-            <a href="#anomali" class="btn">
-                Lihat Dokumentasi
-            </a>
-        </div>
-    </header>
-
-    <main id="anomali">
-
-        <section class="section-title">
-            <p class="small-title">GALLERY</p>
-
-            <h2>Dokumentasi Anomali</h2>
-
-            <p>
-                Berikut dokumentasi anomali dan permasalahan
-                pada perangkat atau jaringan TKJ.
-            </p>
-        </section>
-
-        <section class="gallery">
-
-            <article class="card">
-                <div class="image-box">
-                    <img src=".foto1 (1).jpeg"
-                         alt="Anomali TKJ 1"
-                         onclick="openModal(this.src)">
-                </div>
-                <div class="card-content">
-                    <span class="number">01</span>
-                    <h3>Anomali TKJ #1</h3>
-                    <p>Deskripsi anomali pertama.</p>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="image-box">
-                    <img src=".foto1 (2).jpeg"
-                         alt="Anomali TKJ 2"
-                         onclick="openModal(this.src)">
-                </div>
-                <div class="card-content">
-                    <span class="number">02</span>
-                    <h3>Anomali TKJ #2</h3>
-                    <p>Deskripsi anomali kedua.</p>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="image-box">
-                    <img src=".foto1 (3).jpeg"
-                         alt="Anomali TKJ 3"
-                         onclick="openModal(this.src)">
-                </div>
-                <div class="card-content">
-                    <span class="number">03</span>
-                    <h3>Anomali TKJ #3</h3>
-                    <p>Deskripsi anomali ketiga.</p>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="image-box">
-                    <img src="./foto/foto1 (4).jpeg"
-                         alt="Anomali TKJ 4"
-                         onclick="openModal(this.src)">
-                </div>
-                <div class="card-content">
-                    <span class="number">04</span>
-                    <h3>Anomali TKJ #4</h3>
-                    <p>Deskripsi anomali keempat.</p>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="image-box">
-                    <img src="./foto/foto1 (5).jpeg"
-                         alt="Anomali TKJ 5"
-                         onclick="openModal(this.src)">
-                </div>
-                <div class="card-content">
-                    <span class="number">05</span>
-                    <h3>Anomali TKJ #5</h3>
-                    <p>Deskripsi anomali kelima.</p>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="image-box">
-                    <img src="./foto/foto1 (6).jpeg"
-                         alt="Anomali TKJ 6"
-                         onclick="openModal(this.src)">
-                </div>
-                <div class="card-content">
-                    <span class="number">06</span>
-                    <h3>Anomali TKJ #6</h3>
-                    <p>Deskripsi anomali keenam.</p>
-                </div>
-            </article>
-
-        </section>
-    </main>
-
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img id="modalImage" class="modal-image" alt="Foto diperbesar">
+<!-- Navbar -->
+<nav>
+    <div class="logo">
+        <span>&lt;/&gt;</span> TKJ
     </div>
 
-    <footer>
-        <p>© 2026 12 Anomali TKJ</p>
-        <p>Teknik Komputer dan Jaringan</p>
-    </footer>
+    <div class="nav-title">
+        12 ANOMALI TKJ
+    </div>
 
-    <!-- Hubungkan JavaScript -->
-    <script src="./script.js"></script>
+    <div class="status">
+        <span></span> ONLINE
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ⚡ DOCUMENTATION PROJECT
+        </div>
+
+        <h1>
+            12 <span>ANOMALI</span><br>
+            TKJ
+        </h1>
+
+        <p>
+            Kumpulan 32 momen unik, random, dan
+            tidak biasa yang terjadi di dunia TKJ.
+        </p>
+
+        <button onclick="scrollGallery()">
+            LIHAT GALERI
+            <b>↓</b>
+        </button>
+
+    </div>
+
+    <div class="hero-decoration">
+        <div class="circle"></div>
+        <div class="code-box">
+            <span>&gt; system.start()</span><br>
+            <span>&gt; loading_gallery...</span><br>
+            <span>&gt; 32 photos found</span><br>
+            <span>&gt; status: <strong>SUCCESS</strong></span>
+        </div>
+    </div>
+
+</header>
+
+<!-- Gallery -->
+<main id="gallery">
+
+    <div class="section-title">
+        <div>
+            <small>PHOTO ARCHIVE</small>
+            <h2>Galeri Anomali</h2>
+        </div>
+
+        <div class="counter">
+            <strong>32</strong>
+            <span>PHOTOS</span>
+        </div>
+    </div>
+
+    <section class="gallery">
+
+        <div class="photo-card">
+            <img src="foto1%20(1).jpeg" alt="Anomali 1">
+            <div class="photo-number">01</div>
+            <div class="photo-info">ANOMALI #01</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(2).jpeg" alt="Anomali 2">
+            <div class="photo-number">02</div>
+            <div class="photo-info">ANOMALI #02</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(3).jpeg" alt="Anomali 3">
+            <div class="photo-number">03</div>
+            <div class="photo-info">ANOMALI #03</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(4).jpeg" alt="Anomali 4">
+            <div class="photo-number">04</div>
+            <div class="photo-info">ANOMALI #04</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(5).jpeg" alt="Anomali 5">
+            <div class="photo-number">05</div>
+            <div class="photo-info">ANOMALI #05</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(6).jpeg" alt="Anomali 6">
+            <div class="photo-number">06</div>
+            <div class="photo-info">ANOMALI #06</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(7).jpeg" alt="Anomali 7">
+            <div class="photo-number">07</div>
+            <div class="photo-info">ANOMALI #07</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(8).jpeg" alt="Anomali 8">
+            <div class="photo-number">08</div>
+            <div class="photo-info">ANOMALI #08</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(9).jpeg" alt="Anomali 9">
+            <div class="photo-number">09</div>
+            <div class="photo-info">ANOMALI #09</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(10).jpeg" alt="Anomali 10">
+            <div class="photo-number">10</div>
+            <div class="photo-info">ANOMALI #10</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(11).jpeg" alt="Anomali 11">
+            <div class="photo-number">11</div>
+            <div class="photo-info">ANOMALI #11</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(12).jpeg" alt="Anomali 12">
+            <div class="photo-number">12</div>
+            <div class="photo-info">ANOMALI #12</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(13).jpeg" alt="Anomali 13">
+            <div class="photo-number">13</div>
+            <div class="photo-info">ANOMALI #13</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(14).jpeg" alt="Anomali 14">
+            <div class="photo-number">14</div>
+            <div class="photo-info">ANOMALI #14</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(15).jpeg" alt="Anomali 15">
+            <div class="photo-number">15</div>
+            <div class="photo-info">ANOMALI #15</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(16).jpeg" alt="Anomali 16">
+            <div class="photo-number">16</div>
+            <div class="photo-info">ANOMALI #16</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(17).jpeg" alt="Anomali 17">
+            <div class="photo-number">17</div>
+            <div class="photo-info">ANOMALI #17</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(18).jpeg" alt="Anomali 18">
+            <div class="photo-number">18</div>
+            <div class="photo-info">ANOMALI #18</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(19).jpeg" alt="Anomali 19">
+            <div class="photo-number">19</div>
+            <div class="photo-info">ANOMALI #19</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(20).jpeg" alt="Anomali 20">
+            <div class="photo-number">20</div>
+            <div class="photo-info">ANOMALI #20</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(21).jpeg" alt="Anomali 21">
+            <div class="photo-number">21</div>
+            <div class="photo-info">ANOMALI #21</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(22).jpeg" alt="Anomali 22">
+            <div class="photo-number">22</div>
+            <div class="photo-info">ANOMALI #22</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(23).jpeg" alt="Anomali 23">
+            <div class="photo-number">23</div>
+            <div class="photo-info">ANOMALI #23</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(24).jpeg" alt="Anomali 24">
+            <div class="photo-number">24</div>
+            <div class="photo-info">ANOMALI #24</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(25).jpeg" alt="Anomali 25">
+            <div class="photo-number">25</div>
+            <div class="photo-info">ANOMALI #25</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(26).jpeg" alt="Anomali 26">
+            <div class="photo-number">26</div>
+            <div class="photo-info">ANOMALI #26</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(27).jpeg" alt="Anomali 27">
+            <div class="photo-number">27</div>
+            <div class="photo-info">ANOMALI #27</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(28).jpeg" alt="Anomali 28">
+            <div class="photo-number">28</div>
+            <div class="photo-info">ANOMALI #28</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(29).jpeg" alt="Anomali 29">
+            <div class="photo-number">29</div>
+            <div class="photo-info">ANOMALI #29</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(30).jpeg" alt="Anomali 30">
+            <div class="photo-number">30</div>
+            <div class="photo-info">ANOMALI #30</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(31).jpeg" alt="Anomali 31">
+            <div class="photo-number">31</div>
+            <div class="photo-info">ANOMALI #31</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="foto1%20(32).jpeg" alt="Anomali 32">
+            <div class="photo-number">32</div>
+            <div class="photo-info">ANOMALI #32</div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-logo">&lt;/&gt; TKJ</div>
+    <p>12 ANOMALI TKJ • DOCUMENTATION</p>
+    <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
+```
 
 </body>
 </html>
