@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>12 Anomali TKJ</title>
+
+    <!-- Hubungkan CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="label">DOKUMENTASI TKJ</p>
+
+            <h1>12 ANOMALI TKJ</h1>
+
+            <p class="subtitle">
+                Dokumentasi Anomali dan Permasalahan Jaringan Komputer
+            </p>
+
+            <a href="#anomali" class="btn">
+                Lihat Dokumentasi
+            </a>
+        </div>
+    </header>
+
+    <main id="anomali">
+
+        <section class="section-title">
+            <p class="small-title">GALLERY</p>
+
+            <h2>Dokumentasi Anomali</h2>
+
+            <p>
+                Berikut dokumentasi anomali dan permasalahan
+                pada perangkat atau jaringan TKJ.
+            </p>
+        </section>
+
+        <section class="gallery">
+
+            <article class="card">
+                <div class="image-box">
+                    <img src="./foto/foto1 (1).jpeg"
+                         alt="Anomali TKJ 1"
+                         onclick="openModal(this.src)">
+                </div>
+                <div class="card-content">
+                    <span class="number">01</span>
+                    <h3>Anomali TKJ #1</h3>
+                    <p>Deskripsi anomali pertama.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image-box">
+                    <img src="./foto/foto1 (2).jpeg"
+                         alt="Anomali TKJ 2"
+                         onclick="openModal(this.src)">
+                </div>
+                <div class="card-content">
+                    <span class="number">02</span>
+                    <h3>Anomali TKJ #2</h3>
+                    <p>Deskripsi anomali kedua.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image-box">
+                    <img src="./foto/foto1 (3).jpeg"
+                         alt="Anomali TKJ 3"
+                         onclick="openModal(this.src)">
+                </div>
+                <div class="card-content">
+                    <span class="number">03</span>
+                    <h3>Anomali TKJ #3</h3>
+                    <p>Deskripsi anomali ketiga.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image-box">
+                    <img src="./foto/foto1 (4).jpeg"
+                         alt="Anomali TKJ 4"
+                         onclick="openModal(this.src)">
+                </div>
+                <div class="card-content">
+                    <span class="number">04</span>
+                    <h3>Anomali TKJ #4</h3>
+                    <p>Deskripsi anomali keempat.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image-box">
+                    <img src="./foto/foto1 (5).jpeg"
+                         alt="Anomali TKJ 5"
+                         onclick="openModal(this.src)">
+                </div>
+                <div class="card-content">
+                    <span class="number">05</span>
+                    <h3>Anomali TKJ #5</h3>
+                    <p>Deskripsi anomali kelima.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image-box">
+                    <img src="./foto/foto1 (6).jpeg"
+                         alt="Anomali TKJ 6"
+                         onclick="openModal(this.src)">
+                </div>
+                <div class="card-content">
+                    <span class="number">06</span>
+                    <h3>Anomali TKJ #6</h3>
+                    <p>Deskripsi anomali keenam.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modalImage" class="modal-image" alt="Foto diperbesar">
+    </div>
+
+    <footer>
+        <p>© 2026 12 Anomali TKJ</p>
+        <p>Teknik Komputer dan Jaringan</p>
+    </footer>
+
+    <!-- Hubungkan JavaScript -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
