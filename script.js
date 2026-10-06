@@ -1,42 +1,69 @@
-// =========================
-// MODAL FOTO
-// =========================
-
-const modal = document.getElementById("imageModal");
-const modalImage = document.getElementById("modalImage");
-
-
-// Membuka foto
-function openModal(imageSrc) {
-    modal.style.display = "flex";
-
-    modalImage.src = imageSrc;
-
-    document.body.style.overflow = "hidden";
+function scrollGallery() {
+document.getElementById("gallery").scrollIntoView({
+behavior: "smooth"
+});
 }
 
+/* Klik foto untuk melihat ukuran besar */
 
-// Menutup foto
-function closeModal() {
-    modal.style.display = "none";
+const photos = document.querySelectorAll(".photo-card img");
 
-    modalImage.src = "";
+photos.forEach(photo => {
 
-    document.body.style.overflow = "auto";
+```
+photo.addEventListener("click", function () {
+
+    const overlay = document.createElement("div");
+
+    overlay.className = "image-viewer";
+
+    overlay.innerHTML = `
+        <div class="close-viewer">×</div>
+        <img src="${this.src}" alt="Preview">
+    `;
+
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener("click", function(e) {
+
+        if (
+            e.target === overlay ||
+            e.target.classList.contains("close-viewer")
+        ) {
+            overlay.remove();
+        }
+
+    });
+
+});
+```
+
+});
+
+/* Animasi muncul saat scroll */
+
+const cards = document.querySelectorAll(".photo-card");
+
+const observer = new IntersectionObserver(
+entries => {
+
+```
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},
+{
+    threshold: 0.1
 }
+```
 
+);
 
-// Jangan tutup modal ketika gambar diklik
-modalImage.addEventListener("click", function(event) {
-    event.stopPropagation();
-});
-
-
-// Tutup menggunakan tombol ESC
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-        closeModal();
-    }
-
-});
+cards.forEach(card => observer.observe(card));
